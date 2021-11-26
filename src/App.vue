@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Header from './assets/components/header.vue';
-import Main from './assets/components/main.vue'
+import Header from './assets/components/Header.vue';
+import Main from './assets/components/Main.vue';
 export default {
   name: 'App',
    components:{

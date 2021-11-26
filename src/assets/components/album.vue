@@ -1,19 +1,23 @@
 <template>
-  <div class="col-2 item m-3">
-    <div class="album">
-      Album
-    </div>
-    <h3>
-      Titolo
-    </h3>
-    <p class="group">Gruppo musicale</p>
-    <p class="data">Data album</p>
+  <div class="col-2 item m-3 p-0">
+   
+    <img :src="group.poster">
+    
+    <h4>{{group.title}}</h4>
+    <p class="group m-0">{{group.author}}</p>
+    <p class="data m-0 pb-2">{{group.year}}</p>
   </div> 
 </template>
+     
+    
 
 <script>
 export default {
-  name:'Album'
+  name:'Album',
+  props:{
+
+    group:Object
+  }
 }
 </script>
 
@@ -21,15 +25,16 @@ export default {
 @import '../style/vars.scss';
 .item{
   text-align: center;
-  .album{
-    height:100px;
-    width:100px;
-    background-color:darken($primaryColor,20%);
-    margin:10px auto;
+
+    img{
+      width: 100%;
+      padding: 20px;
+    
   }
    background-color:$primaryColor;
-   h3{
+   h4{
      color:white;
+     margin-bottom:2rem;
    }
    p{
      font-size:12px;
