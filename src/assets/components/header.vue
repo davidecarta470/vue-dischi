@@ -16,6 +16,7 @@ export default {
 header{
   min-height:60px;
   background-color:$primaryColor;
+  color:white
 }
 
 </style>

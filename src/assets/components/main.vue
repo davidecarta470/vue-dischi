@@ -1,30 +1,37 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-      <div class="col-2">ciao</div>
-    </div>
+<div class="background">
+    <div class="container">
+      <div class="row">
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+        <Album/>
+      </div>
   </div>
+</div>
 </template>
 
 <script>
+import Album from './album.vue'
 export default {
-   name:'Main'
+   name:'Main',
+   components:{
+     Album:Album,
+   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '../style/vars.scss';
+.background{
+  background-color:darken($primaryColor,10%);
+  height: calc(100vh - 60px);
+}
 
 </style>
