@@ -1,0 +1,7 @@
+@import '~@fontsource/montserrat/index.css';
+@import '~bootstrap/scss/bootstrap.scss';
+@import './vars.scss';
+body{
+  font-family: $font;
+  color:$primaryColor
+}
