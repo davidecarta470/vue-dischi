@@ -1,15 +1,11 @@
 <template>
   <div class="select-position">
     <select 
-    v-model="selected"
+    
     class="my-4" 
     id=""
     >
-      <option @click="$emit('sendSelect',selected)" value="all">All</option>
-      <option @click="$emit('sendSelect',selected)" value="Pop">Pop</option>
-      <option @click="$emit('sendSelect',selected)" value="Rock">Rock</option>
-      <option @click="$emit('sendSelect',selected)" value="Jazz">Jazz</option>
-      <option @click="$emit('sendSelect',selected)" value="Metal">Metal</option>
+      <option v-for="(option,index) in options" :key="index" @click="$emit('sendSelect',options[index])" value="option">{{option}}</option>
     </select>
   </div>
 </template>
@@ -19,7 +15,8 @@ export default {
    name:"SelectGenre",
    data(){
      return{
-       selected:'all'
+       options:['all','Pop','Rock','Jazz','Metal'],
+  
      }
    },
   
