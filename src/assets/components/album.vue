@@ -1,12 +1,12 @@
 <template>
   <div class="col-2 item m-3 p-0">
-   
     <img :src="group.poster">
-    
     <h4>{{group.title}}</h4>
     <p class="group m-0">{{group.author}}</p>
     <p class="data m-0 pb-2">{{group.year}}</p>
   </div> 
+   
+    
 </template>
      
     
