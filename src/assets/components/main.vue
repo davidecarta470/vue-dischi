@@ -2,7 +2,7 @@
 <div class="background">
     <div class="container">
       <div class="row ">
-        <Select @sendSelect="choseGenra" />
+        <Select @sendSelect="chosedGenra" />
         <Album
         v-for="(group,index) in groups" :key="index"
         :group='group'
@@ -36,8 +36,6 @@ export default {
     this.getApi()
    },
 
-
-
    methods:{
      getApi(){
        axios.get("https://flynn.boolean.careers/exercises/api/array/music")
@@ -48,29 +46,24 @@ export default {
           if (this.genre !== 'all') {
             this.groupsChosed=[]
             this.groups.forEach((group)=>{
-           
               if (group.genre === this.genre){
                 this.groupsChosed.push(group)
-       
               }
             })
             this.groups=[];
             this.groups = this.groupsChosed
           }
              
-            
-          
-        
-
         })
         .catch(e=>{
           console.log(e)
         })
      },
-     choseGenra(text){
+     chosedGenra(text){
        this.genre=text;
        this.getApi()
      }
+
    }
 }
 </script>
@@ -83,3 +76,10 @@ export default {
 }
 
 </style>
+       
+           
+
+
+            
+          
+        

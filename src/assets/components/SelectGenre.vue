@@ -1,14 +1,18 @@
 <template>
   <div class="select-position">
-    <select 
-    
-    class="my-4" 
-    id=""
-    >
-      <option v-for="(option,index) in options" :key="index" @click="$emit('sendSelect',options[index])" value="option">{{option}}</option>
+    <select class="my-4"  id="" >
+      <option 
+        v-for="(option,index) in options" :key="index" 
+        @click="$emit('sendSelect',options[index])"
+        value="option"
+      >
+       {{option}}
+      </option>
+
     </select>
   </div>
 </template>
+    
 
 <script>
 export default {
